@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var time = 0
     var body: some View {
         ZStack{
             VStack(spacing: 0){
@@ -19,9 +20,17 @@ struct ContentView: View {
                 .foregroundColor(.secondary)
                 .padding(50)
                 .background(.ultraThinMaterial)
-                
+            
+            Picker("Select dates", selection: $time){
+                ForEach(0..<10, id: \.self){ time in
+                    Text("\(time) time")
+                }
+            }
+            
         }
         .ignoresSafeArea()
+
+        
         }
 }
 
