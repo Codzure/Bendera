@@ -15,7 +15,7 @@ struct ContentView: View {
                 Color.blue
             }
             
-            Text("Your content here")
+            Text("Choose your flag")
                 .foregroundColor(.secondary)
                 .padding(50)
                 .background(.ultraThinMaterial)
